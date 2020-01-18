@@ -109,11 +109,12 @@ class Ticket:
             str_row = []
             for cell in row:
                 if not cell:
-                    str_row.append('   ')
+                    str_cell = '   '
                 elif cell == -1:
-                    str_row.append('  -')
+                    str_cell = '  -'
                 else:
-                    str_row.append('{:>3}'.format(cell))
+                    str_cell = '{:>3}'.format(cell)
+                str_row.append(str_cell)
 
             all_str.append(''.join(str_row))
 
